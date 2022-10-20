@@ -7,20 +7,20 @@ export default function Home() {
     const { user } = useContext(AuthContext)
 
     return (
-        <div>
-            <h1>Nyob zoo & welcome!</h1>
+        <div className="mb-5">
+            <h1>What's your Rec?</h1>
             {
                 (user.loggedIn) ?
                 (
                     <>
                         <p>Welcome, { user.username }</p>
                         <PostForm />
+                        <PostList />
                     </>
                 )
                 :
                 ''
             }
-            <PostList />
         </div>
     )
 }
