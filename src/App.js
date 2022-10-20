@@ -22,7 +22,6 @@ function App() {
               <>
               <Link to="/members" className="nav-link">Members</Link>
               <Link to="/postlist" className="nav-link">Explore</Link>
-              <Link to="/settings" className="nav-link">Settings</Link>
               </>  
                 :
                 ''

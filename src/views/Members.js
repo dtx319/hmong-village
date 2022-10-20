@@ -1,28 +1,19 @@
-import Member from '../components/Member';
+import { useEffect, useState, useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import FeaturedMember from '../components/FeaturedMember';
-import { useState } from 'react';
+import Member from '../components/Member';
+import { DataContext } from '../contexts/DataProvider'
 
 function Members() {
-  const [members, setMembers] = useState([
-    {
-      "id": 1,
-      "firstName": "Dennis",
-      "lastName": "Xiong",
-      "state": "California",
-      "city": "Merced",
-      "age": 28
-    },
-    {
-      "id": 2,
-      "firstName": "Pachia",
-      "lastName": "Xiong",
-      "state": "California",
-      "city": "Merced",
-      "age": 24
-    }
-  ])
+  const [member, setMember] = useState({})
+  const { uid } = useParams()
+  const { getUser, members } = useContext(DataContext)
 
-  const[featuredMember, setFeaturedMember] = useState(members[0])
+  useEffect(() => {
+    getUser(uid, setMember)
+  }, [])
+
+  const[featuredMember, setFeaturedMember] = useState(member[0])
 
     return (
         <div className="App">

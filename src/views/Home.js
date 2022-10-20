@@ -8,12 +8,12 @@ export default function Home() {
 
     return (
         <div className="mb-5">
-            <h1>What's your Rec?</h1>
             {
                 (user.loggedIn) ?
                 (
                     <>
-                        <p>Welcome, { user.username }</p>
+                        <p z-index>Welcome, { user.username }</p>
+                        <h1>What's your Rec?</h1>
                         <PostForm />
                         <br />
                         {/* <h3>Check out these other recommendations!</h3>
@@ -22,7 +22,6 @@ export default function Home() {
                 )
                 :
                 <>
-                    <h3>Please login to continue.</h3>
                 </>
             }
         </div>

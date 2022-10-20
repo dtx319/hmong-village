@@ -17,7 +17,7 @@ export default function PostForm() {
     }
 
     return (
-            <form onSubmit={handleSubmit}>
+            <form id="recform" onSubmit={handleSubmit}>
                 <h3> Recommend a Song!</h3>
                 <div className="form-group mb-3">
                     <label htmlFor="title">Song Title</label>
