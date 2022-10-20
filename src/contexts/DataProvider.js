@@ -10,12 +10,6 @@ export const DataProvider = function (props) {
     const db = getFirestore()
 
     useEffect(() => {
-        // fetch('http://127.0.0.1:5000/api/posts')
-        //     .then((res) => res.json())
-        //     .then((data) => {
-        //         setPosts(data)
-        //         console.log(data)
-        //     })
         const getPosts = async function () {
             const collectionRef = collectionGroup(db, 'posts')
             const q = query(collectionRef, orderBy('dateCreated', 'desc'))
@@ -36,12 +30,6 @@ export const DataProvider = function (props) {
     }, [user])
 
     const getPost = async function (id, callback) {
-        // fetch(`http://127.0.0.1:5000/api/post/${id}`)
-        //     .then((res) => res.json())
-        //     .then((data) => {
-        //         callback(data)
-        //         console.log(data)
-        //     })
         const docRef = doc(db, "posts", id)
         const docSnap = await getDoc(docRef)
 
