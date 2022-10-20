@@ -29,8 +29,8 @@ export const DataProvider = function (props) {
         getPosts()
     }, [user])
 
-    const getPost = async function (id, callback) {
-        const docRef = doc(db, "posts", id)
+    const getPost = async function (uid, id, callback) {
+        const docRef = doc(db, "users", uid, "posts", id)
         const docSnap = await getDoc(docRef)
 
         const post = {

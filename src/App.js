@@ -1,6 +1,6 @@
 import Home from './views/Home';
 import Members from './views/Members';
-import PostSingle from './views/PostSingle'
+import PostSingle from './views/PostSingle';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthProvider';
 import { useContext } from 'react';
@@ -42,9 +42,7 @@ function App() {
         </Routes>
       </div >
     </BrowserRouter>
-
-
-  )
+  );
 }
 
 export default App;
