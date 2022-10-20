@@ -21,7 +21,8 @@ export const DataProvider = function (props) {
                 console.log(doc.id, " => ", doc.data());
                 postsArr.push({
                     ...doc.data(),
-                    id: doc.id
+                    id: doc.id,
+                    uid: doc.ref.parent.parent.id
                 })
             })
             setPosts(postsArr)
@@ -41,9 +42,10 @@ export const DataProvider = function (props) {
         callback(post)
     }
 
-    const addPost = async function (title, body) {
+    const addPost = async function (title, artist, body) {
         const post = {
             title: title,
+            artist: artist,
             body: body,
             dateCreated: Timestamp.now()
         }

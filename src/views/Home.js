@@ -15,11 +15,15 @@ export default function Home() {
                     <>
                         <p>Welcome, { user.username }</p>
                         <PostForm />
-                        <PostList />
+                        <br />
+                        {/* <h3>Check out these other recommendations!</h3>
+                        <PostList /> */}
                     </>
                 )
                 :
-                ''
+                <>
+                    <h3>Please login to continue.</h3>
+                </>
             }
         </div>
     )

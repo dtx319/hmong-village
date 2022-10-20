@@ -9,15 +9,11 @@ import { useContext, useState, useEffect } from 'react';
 function App() {
   const { login, logout, user } = useContext(AuthContext)
 
-
   return (
     <BrowserRouter>
 
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-        <a className="navbar-brand mx-3" href="#">RecTunes</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <a className="navbar-brand mx-3" href="#"><b>Hmong Village</b></a>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
           <Link to="/" className="nav-link">Home</Link>
@@ -25,7 +21,7 @@ function App() {
               (user.loggedIn) ?
               <>
               <Link to="/members" className="nav-link">Members</Link>
-              <Link to="/postlist" className="nav-link">Forum</Link>
+              <Link to="/postlist" className="nav-link">Explore</Link>
               <Link to="/settings" className="nav-link">Settings</Link>
               </>  
                 :
@@ -48,13 +44,18 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/members" element={<Members />} />
           <Route path="/post">
-            <Route path=":id" element={<PostSingle />} />
+            <Route path=":uid">
+              <Route path=":id" element={<PostSingle />} />
+            </Route>
           </Route>
           <Route path="/postlist" element={<PostList />} />
         </Routes>
       </div >
 
       {/* BODY SECTION */}
+  
+
+  
   
 
     </BrowserRouter>
