@@ -1,6 +1,7 @@
 import Home from './views/Home';
 import Members from './views/Members';
 import PostSingle from './views/PostSingle';
+import PostList from './components/PostList'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthProvider';
 import { useContext } from 'react';
@@ -20,7 +21,7 @@ function App() {
           <div className="navbar-nav">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/members" className="nav-link">Members</Link>
-            <Link to="/posts" className="nav-link">Forum</Link>
+            <Link to="/postlist" className="nav-link">Forum</Link>
           </div>
           <div className="navbar-nav ml-auto">
             {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/post">
             <Route path=":id" element={<PostSingle />} />
           </Route>
+          <Route path="/postlist" element={<PostList />} />
         </Routes>
       </div >
     </BrowserRouter>

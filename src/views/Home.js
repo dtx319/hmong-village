@@ -8,7 +8,7 @@ export default function Home() {
 
     return (
         <div>
-            <h1>Home</h1>
+            <h1>Nyob zoo & welcome!</h1>
             {
                 (user.loggedIn) ?
                 (
