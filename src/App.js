@@ -1,13 +1,17 @@
 import Home from './views/Home';
 import Members from './views/Members';
+import Spotify from './views/Spotify';
 import PostSingle from './views/PostSingle';
 import PostList from './components/PostList';
+import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthProvider';
 import { useContext, useState, useEffect } from 'react';
 
 function App() {
   const { login, logout, user } = useContext(AuthContext)
+
+
 
   return (
     <BrowserRouter>
@@ -20,8 +24,9 @@ function App() {
           {
               (user.loggedIn) ?
               <>
-              <Link to="/members" className="nav-link">Members</Link>
+              {/* <Link to="/members" className="nav-link">Members</Link> */}
               <Link to="/postlist" className="nav-link">Explore</Link>
+              <Link to="/spotify" className="nav-link">Spotify</Link>
               </>  
                 :
                 ''
@@ -41,7 +46,8 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/members" element={<Members />} />
+          <Route path="/spotify" element={<Spotify />} />
+          {/* <Route path="/members" element={<Members />} /> */}
           <Route path="/post">
             <Route path=":uid">
               <Route path=":id" element={<PostSingle />} />
@@ -54,7 +60,6 @@ function App() {
       {/* BODY SECTION */}
   
 
-  
   
 
     </BrowserRouter>

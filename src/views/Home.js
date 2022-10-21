@@ -12,8 +12,8 @@ export default function Home() {
                 (user.loggedIn) ?
                 (
                     <>
-                        <p z-index>Welcome, { user.username }</p>
-                        <h1>What's your Rec?</h1>
+                        <h1>Welcome, { user.username }</h1>
+                        <h2><i>What's your Rec?</i></h2>
                         <PostForm />
                         <br />
                         {/* <h3>Check out these other recommendations!</h3>

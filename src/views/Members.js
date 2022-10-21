@@ -21,7 +21,7 @@ function Members() {
                 <h2>Featured Member</h2>
                 <FeaturedMember member={featuredMember} />
                 <hr />
-                {members.map((member) => <Member clickHandler={setFeaturedMember} key={uid} preview={true} member={member} />)}
+                {members.map((member) => <Member clickHandler={setFeaturedMember} member={member} key={member.uid} preview={true} />)}
             </header>
         </div>
     );
