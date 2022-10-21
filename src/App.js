@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
 
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand mx-3" href="#"><b>Hmong Village</b></a>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
