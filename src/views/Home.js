@@ -7,7 +7,7 @@ export default function Home() {
     const { user } = useContext(AuthContext)
 
     return (
-        <div className="mb-5">
+        <div>
             {
                 (user.loggedIn) ?
                 (
@@ -21,8 +21,7 @@ export default function Home() {
                     </>
                 )
                 :
-                <>
-                </>
+                ''
             }
         </div>
     )
