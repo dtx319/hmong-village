@@ -1,5 +1,5 @@
 **HMONG VILLAGE**
-A place for Hmong music lovers to recommend songs to each other.
+A place for Hmong music lovers to recommend songs to each other and build community.
 
 
 
